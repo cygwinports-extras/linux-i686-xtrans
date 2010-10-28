@@ -1,0 +1,6 @@
+CROSS_HOST="i686-pc-linux-gnu"
+ORIG_PN="xtrans"
+inherit cross xorg
+
+# xtrans.pc Cflags varies per system, so this is not system-independent
+MAKEOPTS+=" pkgconfigdir=\$(libdir)/pkgconfig"
